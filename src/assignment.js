@@ -14,18 +14,11 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-  if (toString.call(arrayOfNumbers) !== "[object Array]")
-    return false;
-      
-            var total =  0;
-            for(var i=0;i<arrayOfNumbers.length;i++)
-              {                  
-                if(isNaN(arrayOfNumbers[i])){
-                continue;
-                 }
-                  total += Number(arrayOfNumbers[i]);
-               }
-             return total;
+  let sum = 0;
+  for(let i =0; i < arrayOfNumbers.length; i++){
+    sum += arrayOfNumbers[i];
+  }
+  return sum;
   return arrayOfNumbers.length;
 }
 assignment.sumOfNumbers = sumOfNumbers;
